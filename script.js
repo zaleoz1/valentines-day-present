@@ -67,6 +67,68 @@ indicators.forEach((indicator) => {
 // Inicia o carrossel automático
 setInterval(autoScroll, 3000); // Troca a cada 3 segundos
 
+let startX = 0;
+let isDragging = false;
+
+imagesContainer.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    isDragging = true;
+});
+
+imagesContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - startX;
+
+    // Adicione um efeito visual de arrastar (opcional)
+    imagesContainer.style.transform = `translateX(calc(${-currentIndex * 100}% + ${diff}px))`;
+});
+
+imagesContainer.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const diff = e.clientX - startX;
+
+    // Determina se deve mudar para a próxima ou anterior
+    if (diff > 50 && currentIndex > 0) {
+        currentIndex--;
+    } else if (diff < -50 && currentIndex < totalImages - 1) {
+        currentIndex++;
+    }
+
+    updateCarousel(currentIndex);
+});
+
+// Suporte para dispositivos móveis
+imagesContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+});
+
+imagesContainer.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const diff = e.touches[0].clientX - startX;
+
+    // Adicione um efeito visual de arrastar (opcional)
+    imagesContainer.style.transform = `translateX(calc(${-currentIndex * 100}% + ${diff}px))`;
+});
+
+imagesContainer.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const diff = e.changedTouches[0].clientX - startX;
+
+    // Determina se deve mudar para a próxima ou anterior
+    if (diff > 50 && currentIndex > 0) {
+        currentIndex--;
+    } else if (diff < -50 && currentIndex < totalImages - 1) {
+        currentIndex++;
+    }
+
+    updateCarousel(currentIndex);
+});
+
 const musicBtn = document.getElementById('music-btn');
 const audio = new Audio('Music/Te Vivo - Luan Santana.mp3'); // Caminho para o arquivo de música
 audio.loop = true; // Ativa o loop da música
