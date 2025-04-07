@@ -65,7 +65,7 @@ indicators.forEach((indicator) => {
 });
 
 // Inicia o carrossel automático
-setInterval(autoScroll, 3000); // Troca a cada 3 segundos
+setInterval(autoScroll, 4000); // Troca a cada 4 segundos
 
 let startX = 0;
 let isDragging = false;
@@ -188,5 +188,5 @@ createStars();
 const playBtn = document.getElementById('play-btn');
 
 playBtn.addEventListener('click', () => {
-    window.location.href = 'Presente/index2.html'; // Substitua pelo link desejado
+    window.location.href = 'Presente/index2.html'; 
 });
