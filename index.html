@@ -1,74 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Valentine's Day</title>
-    <link rel="shortcut icon" href="Presente/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaléo & Cecília </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .font-cursive { font-family: 'Great Vibes', cursive; }
+  </style>
 </head>
-<body>
-    <div id="intro-screen">
-        <button id="reveal-btn">Surpresaa!</button>
-    </div>
-
-    <div id="main-content" class="hidden">
-        <div class="stars"></div>
-        <div class="night">
-            <!-- Se baixou e leu teu C# é meu-->
+<body class="bg-black text-white font-sans min-h-screen flex flex-col items-center">
+  <div class="w-full max-w-md mx-auto p-4">
+    <!-- Capa -->
+    <div class="relative rounded-xl overflow-hidden shadow-lg">
+      <img src="img/7 (1).jpg" alt="Casal" class="w-full  object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-transparent"></div>
+      <div class="absolute top-3 left-3">
+        <div class="flex items-center space-x-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-5">
+          <span class="uppercase text-[10px] tracking-widest text-white/80 font-semibold">SERIES</span>
         </div>
-        <h1 class="title">Isaléo & Cecília</h1>
-       
-        <div id="carousel" class="carousel">
-            <div class="carousel-images">
-                <img src="img/3.png" alt=" 1" class="main-photo">
-                <img src="img/5.png" alt=" 2" class="main-photo">
-                <img src="img/4.png" alt=" 3" class="main-photo">
-                <img src="img/2.png" alt=" 1" class="main-photo">
-                <img src="img/3.png" alt=" 2" class="main-photo">
-                <img src="img/1.png" alt=" 3" class="main-photo">
-              
-            </div>
-            <div class="carousel-indicators">
-                <span class="indicator active" data-index="0"></span>
-                <span class="indicator" data-index="1"></span>
-                <span class="indicator" data-index="2"></span>
-                <span class="indicator" data-index="3"></span> 
-                <span class="indicator" data-index="4"></span> 
-                <span class="indicator" data-index="5"></span> 
-            </div>
+        <div class="mt-1 flex items-center space-x-2">
+          <span class="bg-red-600 text-[10px] px-1.5 rounded font-bold">10</span>
+          <span class="text-xs font-semibold text-white/90">Top 1 Melhores Casais do Mundo</span>
         </div>
-
-        <p id="contador" class="contador"></p>
-        <h2 class="title">Feliz dia dos namorados</h2>
-        <p class="mensagem">
-            Minha Cecília,
-
-            Hoje é Dia dos Namorados, mas pra mim, todo dia ao seu lado já é uma data especial.
-            
-            Eu poderia escrever mil palavras dizendo o quanto te amo, mas nenhuma delas conseguiria explicar como é meu coração quando vc sorri. Ou como até os momentos mais engraçados com a gente viram lembranças que eu guardo com carinho (e umas boas risadas também, né?).
-            
-            Tipo aquele dia que vc derrubou refrigerante em mim — e eu quase morri de vergonha. Ou quando a gente foi pro açude e caiu da rede juntos, como se o universo fizesse questão de dizer: “vocês dois são uma bagunça… mas são perfeitos juntos”.
-            
-            Sem falar nas vezes em que vc ganhou no Uno... roubando descaradamente, e ainda ria como se fosse a jogadora mais honesta da mesa. Spoiler: eu sempre soube, viu? Mas te deixei ganhar porque, mesmo trapaceando, vc é meu amor, e te ver feliz é melhor que qualquer vitória.
-            
-            Agora, as nossas lutinhas... ah, nessas eu ganho de verdade! Não que isso importe muito, porque no fim das contas, só de estar ali contigo, seja brincando, rindo ou só ficando em silêncio de mãos dadas, eu já me sinto o cara mais sortudo do mundo.
-            
-            Te amo pela sua risada feia, pelos seus dramas engraçados, pelos seus abraços apertados e pelo jeito como vc transforma qualquer momento simples em algo inesquecível.
-            
-            Obrigado por ser meu caos favorito e minha paz ao mesmo tempo.
-                <strong >TE AMO.</strong>
-            
+      </div>
+      <div class="absolute bottom-3 left-3 right-3">
+        <h1 class="text-3xl font-cursive text-white drop-shadow font-bold leading-tight">Isaléo e Cecília</h1>
+        <p class="mt-1 text-xs text-white drop-shadow font-light leading-snug">
+          Cada momento ao seu lado é um presente que a vida me deu, e eu sou eternamente grato por te ter como minha. Você é a razão do meu sorriso, a calma nos meus dias turbulentos e a alegria que ilumina o meu coração. Te amo mais do que palavras podem expressar.
         </p>
-        <div class="music-player">
-            <button id="music-btn" class="music-btn">🎧</button>
-            <button id="play-btn" class="music-btn">💬</button>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-green-400 font-bold text-sm">Estreou em 01/01/2023</span>
+          <span class="bg-green-600 text-xs px-2 py-0.5 rounded font-bold">L</span>
         </div>
+        <div class="mt-2 flex space-x-2">
+          <button id="btn-musica" class="bg-[#222]/80 border border-white/20 text-white px-4 py-1.5 rounded-full flex items-center space-x-2 hover:bg-white/20 transition text-sm font-semibold">
+           <img class="w-4 h-4" src="icones/play.png" alt="">
+            <span id="btn-musica-texto">Nossa Musica</span>
+          </button>
+          <button onclick="window.location.href='present.html'" class="bg-[#222]/80 border border-white/20 text-white px-4 py-1.5 rounded-full flex items-center space-x-2 hover:bg-white/20 transition text-sm font-semibold">
+  <img class="w-4 h-4" src="icones/present.png" alt="">
+  <span>Nosso Presente</span>
+</button>
+        </div>
+      </div>
     </div>
+    <!-- Fim capa -->
+
+    <!-- Melhores momentos -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold mb-4 text-white drop-shadow">Nossos Melhores Momentos</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/1.png" alt="Momento 1" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 1</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/8.jpg" alt="Momento 2" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 2</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/7 (2).jpg" alt="Momento 3" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 3</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/4.png" alt="Momento 4" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 4</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/5.png" alt="Momento 5" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 5</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/6.png" alt="Momento 6" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 6</div>
+        </div>
+         <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/14.jpg" alt="Momento 6" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 7</div>
+        </div>
+         <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <img src="img/12.jpg" alt="Momento 6" class="object-cover w-full aspect-square group-hover:opacity-80 transition">
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 8</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <video class="momento-video object-cover w-full aspect-square group-hover:opacity-80 transition" src="videos/v3.mp4" muted loop></video>
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 9</div>
+        </div>
+        <div class="relative group rounded overflow-hidden shadow-lg border-2 border-white/10 hover:scale-105 transition-transform duration-300 bg-black/60">
+          <video class="momento-video object-cover w-full aspect-square group-hover:opacity-80 transition" src="videos/v1.mp4" muted loop></video>
+          <div class="absolute bottom-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white opacity-0 group-hover:opacity-100 transition">Momento 10</div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Fim melhores momentos -->
+
+    <!-- Rodapé -->
+    <footer class="mt-8 text-center text-gray-400 text-sm font-semibold tracking-wide">
+      Feliz dia dos namorados, meu amor! Que possamos celebrar muitos outros momentos juntos, sempre com amor e alegria. Você é a razão do meu sorriso e a luz da minha vida. Te amo infinitamente!
+    </footer>
+  </div>
+  <audio id="audio-te-vivo" src="Music/Te Vivo - Luan Santana.mp3"></audio>
+  <script src="script.js"></script>
 </body>
 </html>
