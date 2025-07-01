@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tocando) {
       audio.play();
       imgMusica.src = 'icones/pause.png';
-      textoMusica.textContent = 'Te Vivo';
+      textoMusica.textContent = 'Amor Sem Medida';
     } else {
       audio.pause();
       imgMusica.src = 'icones/play.png';
